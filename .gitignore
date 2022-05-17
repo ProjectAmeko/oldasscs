@@ -559,3 +559,5 @@ fabric.properties
 # Editor-based Rest Client
 
 # Android studio 3.1+ serialized cache file
+
+*.idea\

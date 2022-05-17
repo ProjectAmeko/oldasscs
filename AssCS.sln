@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssCS", "AssCS\AssCS.csproj", "{E6E98D15-85E2-4FF5-A0B0-274E0DA63C20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ameko", "Ameko\Ameko.csproj", "{C8211913-4F55-4EB0-A8BF-620F806255EC}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
