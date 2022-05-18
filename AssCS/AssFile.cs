@@ -10,6 +10,7 @@ public class AssFile
     public List<AssStyle> Styles { get; private set; }
     public List<AssEvent> Events { get; private set; }
     public AssMeta ScriptMetadata { get; private set; }
+    public List<AssExtradata> ScriptExtradata { get; private set; }
 
     /// <summary>
     /// Create a new ASS file representation
@@ -18,11 +19,13 @@ public class AssFile
     /// <param name="styles">List of styles</param>
     /// <param name="events">List of events</param>
     /// <param name="scriptMetadata">Script metadata dictionary</param>
-    public AssFile(AssInfo scriptInfo, List<AssStyle> styles, List<AssEvent> events, AssMeta scriptMetadata)
+    /// <param name="scriptExtradata">List of extradata lines</param>
+    public AssFile(AssInfo scriptInfo, List<AssStyle> styles, List<AssEvent> events, AssMeta scriptMetadata, List<AssExtradata> scriptExtradata)
     {
         ScriptInfo = scriptInfo;
         Styles = styles;
         Events = events;
         ScriptMetadata = scriptMetadata;
+        ScriptExtradata = scriptExtradata;
     }
 }
