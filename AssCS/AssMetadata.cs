@@ -4,6 +4,6 @@ namespace Ameko.AssCS;
 /// Shortcut class for the ASS Metadata dictionary
 /// </summary>
 /// <author>Zahuczky</author>
-public class AssMeta : Dictionary<string, string>
+public class AssMetadata : Dictionary<string, string>
 {
 }

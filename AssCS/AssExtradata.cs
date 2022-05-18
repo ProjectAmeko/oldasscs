@@ -9,9 +9,9 @@ public class AssExtradata
     public static int NextId { get; set; } = 0;
 
     public int Id { get; set; }
-    public string? Key  { get; set; }
-    public char ValueType  { get; set; }
-    public string? Value  { get; set; }
+    public string? Key { get; set; }
+    public char ValueType { get; set; }
+    public string? Value { get; set; }
 
     public static AssExtradata Make(string data)
     {
@@ -27,8 +27,8 @@ public class AssExtradata
         var valueType = tokens[2][0];
         var val = tokens[2][1..];
 
-        // TODO: string decoding (soon:tm:)
-        AssExtradata.NextId = Math.Max(id, AssExtradata.NextId) == AssExtradata.NextId ? AssExtradata.NextId : id + 1;
+        // See if the next available ID needs to be upped
+        NextId = (id != NextId) ? (Math.Max(id, NextId) == NextId ? NextId : id + 1) : id + 1;
 
         return new AssExtradata
         {
@@ -40,6 +40,6 @@ public class AssExtradata
     }
     
     public override string ToString() =>
-        $"{"Data"}: {Id},{Key},{ValueType},{Value}";
+        $"Data: {Id},{Key},{ValueType}{Value}";
 
 }

@@ -5,7 +5,7 @@ public static class AssParser
     public static AssFile LoadAndParse(string filePath)
     {
         // Setup
-        var result = new AssFile(new AssInfo(), new List<AssStyle>(), new List<AssEvent>(), new AssMeta(), new List<AssExtradata>());
+        var result = new AssFile(new AssInfo(), new List<AssStyle>(), new List<AssEvent>(), new AssMetadata(), new List<AssExtradata>());
 
         // Open the file and begin parsing
         ParseFunc parseState = ParseUnknownLine;
