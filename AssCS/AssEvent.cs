@@ -60,13 +60,13 @@ public class AssEvent
     /// Create a new event with the given style
     /// </summary>
     /// <returns></returns>
-    public static AssEvent Make(AssStyle style)
+    public static AssEvent Make(AssStyle style, AssTime start, AssTime end)
     {
         return new AssEvent
         {
             Comment = false,
-            Start = AssTime.Make("0:00:00.00"),
-            End = AssTime.Make("0:00:00.00"),
+            Start = start,
+            End = end,
             Actor = "",
             Effect = "",
             Layer = 0,
@@ -76,6 +76,17 @@ public class AssEvent
             Style = style.Name,
             Text = ""
         };
+    }
+
+    /// <summary>
+    /// Create a default event
+    /// </summary>
+    /// <returns>Default event</returns>
+    public static AssEvent Default()
+    {
+        return Make(AssStyle.Default(),
+                AssTime.Make("0:00:00.00"),
+                AssTime.Make("0:00:00.00"));
     }
     
     public override string ToString() =>

@@ -33,7 +33,7 @@ public class AssStyle
     /// <summary>
     /// Create a new style
     /// </summary>
-    /// <param name="data">Style sata string</param>
+    /// <param name="data">Style data string</param>
     /// <returns>A new style</returns>
     public static AssStyle Make(string data)
     {
@@ -70,6 +70,15 @@ public class AssStyle
 
             Encoding = int.Parse(tokens[22])
         };
+    }
+
+    /// <summary>
+    /// Create the default style
+    /// </summary>
+    /// <returns>The default style</returns>
+    public static AssStyle Default()
+    {
+        return Make("Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1");
     }
 
     private static int B(bool input) => input ? 1 : 0;
