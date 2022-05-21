@@ -30,6 +30,6 @@ public class AssTime
 
     public override string ToString()
     {
-        return $"{Hour}:{Minute:D2}:{Second:D2}.{Hundredths:D3}";
+        return $"{Hour}:{Minute:D2}:{Second:D2}.{Hundredths:D2}";
     }
 }
