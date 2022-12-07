@@ -202,6 +202,8 @@ public class AssTime
         return $"{Hour}:{Minute:D2}:{Second:D2}.{Hundredths:D2}";
     }
 
+    public string AsStr => ToString();
+
     public override bool Equals(object obj) => (obj is AssTime other) && this == other;
     public override int GetHashCode() => 13 * ToString().GetHashCode();
 }
